@@ -1,0 +1,18 @@
+{{> navbar}}
+<div id="hero-image">
+	<h1 id="hero-title">{{title}}</h1>
+</div>
+<div id="posters-wrapper" class="content-padding clearfix">
+	{{#each movies}}
+		<div class="poster">
+			<a href="/star_wars_episode/{{this.episode_number}}">
+				<img src="/images/{{this.poster}}" class="img-responsive" />
+				<div class="poster-info-overlay">
+					<h3>{{this.title}}</h3>
+					<h4>View More <i class="fa fa-arrow-right"></i></h4>
+				</div>
+			</a>
+		</div>
+	{{/each}}
+</div>
+{{> footer}}
